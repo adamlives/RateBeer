@@ -1,0 +1,15 @@
+{% extends 'rateBeer/base.html' %}
+
+{% block content %}
+
+<div class="post">
+    {% if taste.tasted_date %}
+        <div class="date">
+            {{ taste.tasted_date }}
+        </div>
+    {% endif %}
+    <h2>{{ taste.brewery }}</h2>
+    <p>{{ taste.tasting_notes|linebreaksbr }}</p>
+</div>
+
+{% endblock %}
