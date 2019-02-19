@@ -120,3 +120,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Import settings we're keeping out of version control (will override)
+from .settings_secret import *
+
+# Override settings in development environment
+if os.environ.get('DJANGO_DEVELOPMENT') == 'True':
+    from .settings_dev import *
