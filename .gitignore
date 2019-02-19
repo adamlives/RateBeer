@@ -4,3 +4,4 @@ requirements.txt
 settings.json
 __pycache__
 *.py[cod]
+BeerRating/settings_secret.py
