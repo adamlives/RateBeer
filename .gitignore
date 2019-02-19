@@ -1,4 +1,4 @@
-env
+beer
 db.sqlite3
 requirements.txt
 settings.json
