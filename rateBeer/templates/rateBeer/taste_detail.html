@@ -3,6 +3,9 @@
 {% block content %}
 
 <div class="post">
+    {% if user.is_authenticated %}
+        <a class="btn btn-default" href="{% url 'taste_edit' pk=taste.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    {% endif %}
     <h2>{{ taste.brewery }} - {{ taste.beer_name }}</h2>
     <p>{{ taste.tasting_notes|linebreaksbr }}</p>
     <p>Beer Type: {{ taste.beer_type }}</p>
