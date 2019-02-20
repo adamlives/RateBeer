@@ -124,6 +124,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+LOGIN_REDIRECT_URL = '/'
 
 # Import settings we're keeping out of version control (will override)
 from .settings_secret import *
