@@ -21,6 +21,7 @@ class Taste(models.Model):
     rating = models.IntegerField(default=3, choices=RATING_CHOICES)
     tasting_notes = models.TextField()
     tasted_date = models.DateTimeField(default=timezone.now)
+    # img_file = models.FileField(upload_to='media/rateBeer/img', null=True)
 
 
     def publish(self):
@@ -28,4 +29,4 @@ class Taste(models.Model):
         self.save()
 
     def __str__(self):
-        return self.brewery + "" + self.beer_name
+        return self.brewery + " " + self.beer_name

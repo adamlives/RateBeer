@@ -3,13 +3,15 @@
 {% block content %}
 
 <div class="post">
-    {% if taste.tasted_date %}
-        <div class="date">
-            {{ taste.tasted_date }}
-        </div>
-    {% endif %}
-    <h2>{{ taste.brewery }}</h2>
+    <h2>{{ taste.brewery }} - {{ taste.beer_name }}</h2>
     <p>{{ taste.tasting_notes|linebreaksbr }}</p>
+    <p>Beer Type: {{ taste.beer_type }}</p>
+    <p>Rating: {{ taste.rating }}</p>
+    <p>Tasted by {{ taste.taster }} on 
+        <span class="date">
+            {{ taste.tasted_date|date:'d b Y' }}
+        </span>
+    </p>
 </div>
 
 {% endblock %}

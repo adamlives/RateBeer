@@ -3,9 +3,8 @@
 {% block content %}
     {% for taste in tastes %}
         <div class="post">
-            <p>Tasted: {{ taste.tasted_date }}</p>
-            <h1><a href="{% url 'taste_detail' pk=taste.pk %}">{{ taste.brewery }}</a></h2>
-            <p>{{ taste.tasting_notes|linebreaksbr }}</p>
+            <h1><a href="{% url 'taste_detail' pk=taste.pk %}">{{ taste.brewery }} - {{ taste.beer_name }}</a></h2>
+            <p>Tasted by {{ taste.taster }} on {{ taste.tasted_date }}</p>
         </div>
     {% endfor %}
 {% endblock %}
